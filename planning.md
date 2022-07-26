@@ -52,3 +52,32 @@
   * [x] apply migrations
     * [x] python manage.py migrate
 
+# Feature 4
+* [x] Register ToDoList model with the admin so that we can use it in the Django admin site
+  * [x] todos/admin.py
+    * [x] in the admin.py file enter:
+      * [x] from todos.models import ToDoList
+      * [x] admin.site.register(ToDoList)
+
+# Feature 5
+* [x] Create a ToDoItem model in todos app
+  * class ToDoItem(models.Model):
+  * [x] todos/models.py
+    * [x] create attributes with the following features:
+        *  Name - Type - Constraints
+      * [x] task - string - max leng of 100 characters
+          * task = models.CharField(max_length=100, null=True)
+      * [x] due_date - date time - should be optional
+          * due_date = models.DateTimeField(null=True)
+      * [x] is_completed - boolean - should default to False
+          * is_completed = models.BooleanField(default=False)
+      * [x] list - foreign key - should be related to the TodoList model and have a related name of "items". It should automatically delete if the to-do list is deleted. (This is a cascade.)
+          * list = models.ForeignKey(ToDoList, related_name="items", on_delete=models.CASCADE)
+    * [x] ToDoItem model should implicitly convert to a string with the __str__ method that is the value of the task property
+  * [x] Make migrations
+    * [x] stage migration
+      * [x] python manage.py makemigrations
+    * [x] apply migrations
+      * [x] python manage.py migrate
+  * [x] register ToDoItem to admin
+    * [x] admin.site.register(ToDoItem)
