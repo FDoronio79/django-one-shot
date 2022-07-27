@@ -1,15 +1,15 @@
 from django import forms
 from todos.models import (
-    ToDoList,
-    ToDoItem,
+    TodoList,
+    TodoItem,
 )
 
-class ToDoListForm(forms.ModelForm):
+class TodoListForm(forms.ModelForm):
     class Meta:
-        model = ToDoList
+        model = TodoList
         fields = '__all__'
 
-class ToDoItemForm(forms.ModelForm):
+class TodoItemForm(forms.ModelForm):
     class Meta:
-        model = ToDoItem
+        model = TodoItem
         fields = '__all__'

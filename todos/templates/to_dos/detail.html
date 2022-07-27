@@ -32,7 +32,9 @@
                         {% for item in todoitem.items.all %}
                             <tr>
                                 <td>
-                                    {{item.task}}
+                                    <a href="{% url 'todo_item_update' item.pk%}">
+                                        {{item.task}}
+                                    </a>
                                 </td>
                                 <td>
                                     {{item.due_date}}

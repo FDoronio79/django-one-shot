@@ -9,13 +9,13 @@
     <body>
         <main>
             <div>
-                <h1>Create a new list</h1>
+                <h1>Update item</h1>
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form.as_p }}
-            
+
                     <button type="submit">
-                        Create
+                        Update
                     </button>
                     <button>
                         <a href="/">Cancel</a>

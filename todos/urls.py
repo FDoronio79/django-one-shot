@@ -9,13 +9,15 @@ from todos.views import (
     update_todo_list,
     delete_todo_list,
     create_item,
+    update_todo_item
 )
 
 urlpatterns = [
     path("", show_todos, name="todo_list_list"),
     path("<int:pk>/", todos_details, name="todo_list_detail"),
-    path("create-todo/", create_todo, name="todo_list_create"),
+    path("create/", create_todo, name="todo_list_create"),
     path("<int:pk>/edit/", update_todo_list, name="todo_list_update"),
-    path("<int:pk>/delete", delete_todo_list, name="todo_list_delete"),
-    path("items/create/", create_item, name="todo_item_create")
+    path("<int:pk>/delete/", delete_todo_list, name="todo_list_delete"),
+    path("items/create/", create_item, name="todo_item_create"),
+    path("items/<int:pk>/edit/", update_todo_item, name="todo_item_update")
 ]
