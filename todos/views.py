@@ -12,7 +12,7 @@ def todos_details(request, pk):
     context = {
         "todoitem": todoitem
     }
-    return render(request, 'to_dos/details.html', context)
+    return render(request, 'to_dos/detail.html', context)
 
 def create_todo(request):
     form = ToDoListForm(request.POST or None)

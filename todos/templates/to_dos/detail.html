@@ -12,23 +12,27 @@
                 <h1>
                     {{todoitem.name}}
                 </h1>
+                <a href="{% url 'todo_list_update' todoitem.pk%}">edit</a>
                 <h2>
                     Task
                 </h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>
-                                Task
-                            </th>
-                            <th>
-                                Due Date
-                            </th>
-                        </tr>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                        <tr>
                     </thead>
                     <tbody>
                         {% for item in todoitem.items.all %}
-                            {{item.task}}
+                            <tr>
+                                <td>
+                                    {{item.task}}
+                                </td>
+                                <td>
+                                    {{item.due_date}}
+                                </td>
+                            </tr>
                         {% endfor %}
                     </tbody>
                 </table>
