@@ -79,5 +79,20 @@
       * [x] python manage.py makemigrations
     * [x] apply migrations
       * [x] python manage.py migrate
-  * [x] register ToDoItem to admin
-    * [x] admin.site.register(ToDoItem)
+
+# Featuere 6
+* [x] register ToDoItem to admin
+  * [x] admin.site.register(ToDoItem) 
+
+# Feature 7
+* [x] Create a list view for the ToDoList model and put them in the context for the template
+* [x] Register that the view in the todos app for the path "" and the name "todo_list_list" in a new file named todos/urls.py
+* [x] Include the URL patterns from the todos app in the brain_two project with the prefix "todos/"
+* [ ] Create a template for the list view that complies with the following specifications.
+  * [x] fundamental five
+  * [x] main tag that contains
+    * [x] div tag that contains
+      * [x] h1 tag with the content "My List"
+        * [x] a table that has two columns:
+          * [x] the first with the header "Name" and the rows with the names of the ToDo lists
+          * [x] the second with the header "Number of items" and nothin in those rows because they don't yet have tasks
