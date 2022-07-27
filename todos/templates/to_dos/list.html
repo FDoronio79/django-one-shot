@@ -9,17 +9,29 @@
     </head>
 
     <body>
-        <div>
-            <h1>
-                My List
+        <main>
+            <div>
+                <h1> My List </h1>
                 <table>
                     <thead>
-                        <th>Name</th>
-                        <th>Number of items</th>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number of items</th>
+                        </tr>
                     </thead>
+                    <tbody>
+                            {% for item in todolists %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'todo_list_detail' item.pk%}"> {{item.name}} </a> 
+                                    </td>
+                                    <td>{{item.items.all|length}}</td>
+                                </tr>
+                            {% endfor %}
+                    </tbody>
                 </table>
-            </h1>
-        </div>
+            </div>
+        </main>
     </body>
 
 </html>

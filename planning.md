@@ -96,3 +96,19 @@
         * [x] a table that has two columns:
           * [x] the first with the header "Name" and the rows with the names of the ToDo lists
           * [x] the second with the header "Number of items" and nothin in those rows because they don't yet have tasks
+
+# Feature 8 
+* [x] Create a view that show the details of a particular to-do list, including its tasks
+* [x] In the todos urls.py file, register the view with the path "<int:pk>/" and the name "todo_list_detail"
+* [x] Create a template to show the details of the todolist and a table of its to-do items
+* [x] Update the list template to show the number of to-do items for a to-do list
+* [x] Update the list template to have a link from the to-do list name to the detail view for that to-do list
+* [ ] Template specifications
+  * [x] fundamental five
+  * [x] main tag containing
+    * [x] div tag containing
+      * [x] h1 tag with the to-do list's name as its content
+      * [x] h2 tag that has the content "Tasks"
+        * [x] a table that contains two columns with the headers "Task" and "Due date" with rows for each task in the to-do list
+
+# Feature 9
