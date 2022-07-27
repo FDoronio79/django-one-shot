@@ -1,3 +1,4 @@
+from venv import create
 from django.urls import path
 
 from todos.views import (
@@ -7,6 +8,7 @@ from todos.views import (
     create_todo,
     update_todo_list,
     delete_todo_list,
+    create_item,
 )
 
 urlpatterns = [
@@ -15,5 +17,5 @@ urlpatterns = [
     path("create-todo/", create_todo, name="todo_list_create"),
     path("<int:pk>/edit/", update_todo_list, name="todo_list_update"),
     path("<int:pk>/delete", delete_todo_list, name="todo_list_delete"),
-    
+    path("items/create/", create_item, name="todo_item_create")
 ]
