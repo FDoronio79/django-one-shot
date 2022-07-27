@@ -12,7 +12,12 @@
                 <h1>
                     {{todoitem.name}}
                 </h1>
-                <a href="{% url 'todo_list_update' todoitem.pk%}">edit</a>
+                <p>
+                    <a href="{% url 'todo_list_update' todoitem.pk%}">edit</a>
+                </p>
+                <p>
+                    <a href="{% url 'todo_list_delete' todoitem.pk%}">Delete</a>
+                </p>
                 <h2>
                     Task
                 </h2>
